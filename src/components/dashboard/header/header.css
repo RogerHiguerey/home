@@ -1,0 +1,63 @@
+/* Header.css */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+}
+.menu-toggle,
+.theme-toggle,
+.logout-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu-toggle:hover,
+.theme-toggle:hover,
+.logout-button:hover {
+  color: var(--header-hover);
+  transform: scale(1.1);
+}
+
+/* Icon size adjustment */
+.menu-toggle svg,
+.theme-toggle svg,
+.logout-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Dark and Light Mode Variables */
+:root {
+  --header-bg: #ffffff;
+  --header-text: #333333;
+  --header-hover: #555555;
+}
+
+body.dark-mode {
+  --header-bg: #1a1a1a;
+  --header-text: #f0f0f0;
+  --header-hover: #cccccc;
+}
