@@ -1,0 +1,146 @@
+/* Estilo general de la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Estilo para los botones */
+button {
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.add-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-top: 20px;
+}
+
+.edit-btn {
+  background-color: #2196F3;
+  color: white;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: #F44336;
+  color: white;
+}
+
+.confirm-delete-btn {
+  background-color: #F44336;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Estilo para formularios dentro del modal */
+form label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form input, form select {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input:focus, form select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0px 0px 3px rgba(76, 175, 80, 0.5);
+}
+/* Estilo para la paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  margin: 0 10px;
+  color: #333;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 10px;
+  }
+
+  form input, form select {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .pagination button {
+    padding: 8px 12px;
+  }
+}

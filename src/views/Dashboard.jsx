@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 
-import { SIDEBAR_STATES } from '../components/dashboard/constants/constants'
-import Sidebar from '../components/dashboard/siderbar/Sidebar'
-import Header from '../components/dashboard/header/Header'
+import { SIDEBAR_STATES } from '../components/dashboard/constants/constants.js'
+import Sidebar            from '../components/dashboard/siderbar/Sidebar'
+import Header             from '../components/dashboard/header/Header'
 
 const Dashboard = () => {
   const [darkMode, setDarkMode] = useState(false)

@@ -1,0 +1,13 @@
+flowchart TD
+  A[LoginView] -. form - onSubmit - handleLogin .-> B[authContext.login] 
+  B -. "(username, password)" .-> C[AuthContext]
+  C -. "authService.login(username, password)" .-> D[authService]
+  D -. "POST - API (username, password)" .-> E{response.ok}
+  E -->|Yes| F[token]
+  E -->|No| G[Error al iniciar sesión]
+    
+   
+  style A fill:#74b946,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 0 0
+  style B fill:#74b946,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 0 0
+  style C fill:#74b946,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 0 0
+  style D fill:#74b946,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 0 0

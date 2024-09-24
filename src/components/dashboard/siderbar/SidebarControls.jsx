@@ -6,10 +6,9 @@ import { SIDEBAR_STATES } from '../constants/constants'
 const SidebarControls = ({ internalState, toggleInternalState }) => {
   return (
     <div className="sidebar-controls">
-      <button
+      <button aria-label="Toggle Sidebar Size"
         className="sidebar-controls-button"
         onClick={toggleInternalState}
-        aria-label="Toggle Sidebar Size"
       >
         {internalState === SIDEBAR_STATES.EXPANDED ? <ChevronLeft /> : <ChevronRight />}
       </button>
