@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/auth';
 import Modal from '../components/modals/Modal.jsx';
 import Button from '../components/button/Button.jsx';
-import axios from 'axios'; 
+import axios from 'axios';
 import '../styles/Login.css';
 
 const LoginView = () => {
@@ -56,9 +56,7 @@ const LoginView = () => {
   // Refactorización de la función de login para usar Axios
   const fetchLogin = async (username, password) => {
     try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/api/users/login`,
-        // `${import.meta.env.VITE_API_URL}/users/login`,
+      const response = await axios.post('https://api-pfxl.onrender.com/api/users/login',
         { username, password },
         { headers: { 'Content-Type': 'application/json' } }
       );
@@ -102,10 +100,10 @@ const LoginView = () => {
         </Button>
       </form>
       {error && (
-        <Modal 
-        title="Error de Inicio de Sesión" 
-        message={error} 
-        onClose={handleCloseModal} 
+        <Modal
+          title="Error de Inicio de Sesión"
+          message={error}
+          onClose={handleCloseModal}
         />
       )}
     </div>
